@@ -1,19 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
-
-  <link rel="stylesheet" href="css/styles.css" type="text/css" />
-
+  <title>Try Harder</title>
+  <meta content = "width=device-width, initial-scale=1, maximum-scale=1"
+  name="viewport"
+  />
+  <link rel="stylesheet" href="css/main.css" type="text/css" />
+  <style>
+      body{
+           height: 100vh;
+           margin: 0;
+           padding: 0;
+           overflow: hidden;
+      }
+      .container{
+          display:grid;
+          height: 100%;
+          grid-template-columns: repeat(8, 1fr);
+          grid-template-rows: 8% 87% 5%;
+          background-color: red;
+          grid-template-areas: 
+          "hd hd hd hd hd hd hd hd"
+          "main main main main main main main main"
+          "ft ft ft ft ft ft ft ft";
+      }
+      .header{
+          grid-area: hd;
+          color: blue;
+          text-align: start;
+          background-color: yellow;
+      }
+      .content{
+          grid-area: main;
+          color: blue;
+          text-align: center;
+          background-color: green;
+      }
+      .footer{
+          grid-area: ft;
+          color: yellow;
+          text-align: right;
+          background-color: blue;
+      }
+  </style>
 </head>
-
 <body>
-    <div class="title">Hello there Mr.</div>
-  <p class="standard">Hi there Obi an</p>
+    <div class = "container">
+        <div class = "header">Header</div>
+        <div class = "content">Content</div>
+        <div class = "footer">Footer</div>
+      </div>
 </body>
 </html>

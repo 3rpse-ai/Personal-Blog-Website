@@ -1,0 +1,24 @@
+:root{
+    --primary-color: #da291c;
+    --primary-dark-color: #72150f;
+    --primary-light-color:#ec756c;
+
+    --secondary-color: #6295ac;
+    --secondary-dark-color: #355564;
+    --secondary-light-color: #a2c0ce;
+
+    --disabled-light-color: #e1e2e5;
+    --disabled-dark-color: #999999;
+
+    --text-color: black;
+    --sub-text-color: #666666;
+
+    --link-color: var(--primary-color);
+    --link-hover-color: var(--primary-dark-color);
+
+    --section-bg-color-white: white;
+    --section-bg-color: #f7f7f7;
+    --section-bg-color-light-blue: #f5f7fa;
+
+    --border-color: #bcbcbc;
+}

@@ -1,0 +1,12 @@
+@import "colors.css";
+@import "spacing.css";
+@import "font-size.css";
+
+.title{
+    font-size: 28px;
+}
+.standard{
+    color: var(--text-color);
+    padding: var(--spacing02);
+    font-size: var(--font-size-large);
+}
