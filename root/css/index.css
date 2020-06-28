@@ -1,0 +1,60 @@
+@import "main.css";
+
+
+
+.overview{
+    grid-area: main;
+    overflow: auto;
+   display: grid;
+   grid-gap:var(--spacing04);
+   padding: var(--spacing04);
+   background-color: var(--section-bg-color-light-blue);
+   grid-auto-rows: 50%, 50%;
+   grid-auto-columns: 1fr, 1fr;
+   grid-template-areas:
+   "art1 art2"
+   "art3 art4";
+}
+
+
+.article{
+   display: flex;
+   background-color: var(--section-bg-color);
+   border-radius: 3%;
+   align-items: center;
+   padding: 16px;
+   overflow: hidden;
+}
+#art1{
+ grid-area: art1;
+}
+#art2{
+ grid-area: art2;
+}
+#art3{
+ grid-area: art3;
+}
+#art4{
+ grid-area: art4;
+}
+.article-image{
+   display: block;
+   max-width: 37%;
+   height: 100%;
+   border-radius: 3%;
+   object-fit: cover;
+}
+.preview{
+   display: flex;
+   flex-direction: column;
+   width: 63%;
+   align-items: flex-start;
+   padding: 16px;
+}
+.preview-text{
+   font-size: var(--font-size-basic);
+   font-family: "Optima";
+   margin: 2px 0px;
+   
+}
+

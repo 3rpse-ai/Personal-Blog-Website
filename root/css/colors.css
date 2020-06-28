@@ -13,12 +13,17 @@
     --text-color: black;
     --sub-text-color: #666666;
 
+    --button-color: var(--primary-color);
+    --button-color-hover: var(--primary-dark-color);
+
     --link-color: var(--primary-color);
     --link-hover-color: var(--primary-dark-color);
 
     --section-bg-color-white: white;
-    --section-bg-color: #f7f7f7;
+    --section-bg-color: var(--primary-light-color);
     --section-bg-color-light-blue: #f5f7fa;
+    --section-bg-color-blue: var(--secondary-color);
+    --section-bg-color-dark: #999999;
 
     --border-color: #bcbcbc;
 }
