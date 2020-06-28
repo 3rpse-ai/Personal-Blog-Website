@@ -24,6 +24,7 @@
     --section-bg-color-light-blue: #f5f7fa;
     --section-bg-color-blue: var(--secondary-color);
     --section-bg-color-dark: #999999;
+    --section-bg-color-light: #dadada;
 
     --border-color: #bcbcbc;
 }

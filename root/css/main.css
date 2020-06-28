@@ -15,7 +15,6 @@
     height: 100%;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 8% 87% 5%;
-    background-color: red;
     grid-template-areas: 
     "hd hd hd hd hd hd hd hd"
     "main main main main main main main main"
@@ -25,7 +24,6 @@
  .content{
     grid-area: main;
     overflow: auto;
-    background-color: green;
  }
 
 body{
@@ -42,6 +40,10 @@ h2{
    font-family: "Palatino";
    font-size: var(--font-size-large);
 }
+h3{
+    font-family: "Palatino";
+    font-size: var(--font-size-medium);
+ }
 p{
    font-family: "Optima";
 }
@@ -79,4 +81,24 @@ a:visited{
 }
 a:hover{
    color: var(--link-hover-color);
+}
+
+input[type="submit"]{
+    color:var(--button-color);
+    margin-top: 16px;
+    padding:10px;
+    border-width: 3px;
+    border-style:solid;
+    border-color: var(--button-color);
+    font-family: "Optima";
+    font-weight: bold;
+}
+input[type="submit"]:hover{
+  border-color: var(--button-color-hover);
+  color:var(--button-color-hover);
+}
+input[type="submit"]:focus{
+  border-color: var(--button-color-hover);
+  color:var(--button-color-hover);
+  outline:none;
 }

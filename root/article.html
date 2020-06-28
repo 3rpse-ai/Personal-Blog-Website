@@ -10,8 +10,90 @@
     <link rel="stylesheet" href="css/main.css" type="text/css" />
 
   <style>
-/* Assign grid area below */
-
+    .heading{
+      background-color: var(--section-bg-color);
+      grid-area: hdg;
+      padding: 0 var(--spacing04);
+    }
+    .author{
+      grid-area: aut;
+      display: flex;
+      align-items: center;
+      padding: 0 var(--spacing04);
+    }
+    .author-image{
+      border-radius: 50%;
+      height: 150px;
+      filter: sepia(40%);
+      float: left;
+    }
+    .author-description{
+      margin: 0 0 0 var(--spacing04);
+    }
+    .author-heading{
+      margin: 0 0 var(--spacing03) 0;
+    }
+    .author-description p{
+      margin: var(--spacing02);
+    }
+    .social{
+      grid-area: soc;
+      padding: 0 0 var(--spacing04) var(--spacing04);
+      background-color: var(--section-bg-color-light);
+    }
+    .social-links{
+      display: flex;
+      flex-direction: row;
+    }
+    .social > p{
+      margin: var(--spacing04) 0 var(--spacing02) 0;
+    }
+    .social img{
+      border-radius: 50%;
+      object-fit: cover;
+      width: 40px;
+      height: 40px;
+      margin: var(--spacing02);
+    }
+    .article{
+      display: grid;
+      background-color: var(--section-bg-color-light-blue);
+      grid-template-columns: repeat(1fr);
+      grid-gap: var(--spacing05);
+      grid-template-areas:
+      "hdg hdg hdg hdg hdg hdg hdg hdg"
+      "img img img img img ads ads ads"
+      "art art art art art aut aut aut"
+      "soc soc soc soc soc soc soc soc";
+    }
+    .article-text{
+      padding: 0 var(--spacing04);
+      grid-area: art;
+    }
+    .ads{
+      grid-area: ads;
+      display: flex;
+      background-color:lightgoldenrodyellow;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 var(--spacing04);
+      text-align: center;
+    }
+    .ad{
+      font-family: sans-serif;
+      font-size: 22px;
+      margin: var(--spacing04);
+      color: var(--primary-color);
+    }
+    .article-image{
+      grid-area: img;
+      width: 100%;
+      height: 60%;
+      object-fit: cover;
+      padding: 0 var(--spacing04);
+    }
+    
   </style>
   </head>
 
@@ -22,8 +104,54 @@
                 Felix' Blog
             </h1>
         </div>
-        <div class = "content">
-            
+        
+        <div class = "content article">
+          <div class = "heading">
+            <h2>Why oil lamps are bad for your car</h2>
+          </div>
+            <div class = "ads">
+              <p class = "ad">$$$ This is an ad $$$</p>
+              <p class = "ad">$$$ This is an ad $$$</p>
+              <p class = "ad">$$$ This is an ad $$$</p>
+              <p class = "ad">$$$ This is an ad $$$</p>
+              <p class = "ad">$$$ This is an ad $$$</p>
+              <p class = "ad">$$$ This is an ad $$$</p>
+            </div>
+            <img class = "article-image" src="images/broken-car.jpg" alt="Article Image" />
+          
+          <div class = "article-text">
+            <p>Have you ever noticed this strange feeling? You start you car and something just doesnt feel right? In addition to this everslight smell of burnt oil suddenly you hear your pistons play the triangle on your cylinders. And then - no one could have guessed - you suddenly stop in the end of nowhere. A true nightmare!</p>
+            <p>Your pistons got stuck. They are basically one with the cylinders now. An unseparable, highly affectionate duo. Romantic.</p>
+            <p>Scientists have now found the ultimate cause for that. After investigating 1000 peoples' stranded cars it was obvious. 990 cars out of the 1000 (so 99%! - shocker) saw a blinking oil lamp before breaking down. Mr. Pisston - a leading scientist, well-known for his peer-ignored research on astrology, confirmed that by that it is confirmed.</p>
+            <p>How could the manufacturers be so bold? How can you actually put something bound to fail a car right on a large production he shouts as he furiously stabs his car's dashboard panel with an already slightly bent screwdriver. Now I will never break down when running from reality ever again!</p>
+            <p>We wish Mr Pisston best of luck in his future endeavors and are looking forward to his future scientific insights.</p>
+          </div>
+          <div class = "author">
+            <img class = "author-image" src="images/author.jpg" alt="Article Image"/>
+            <div class = "author-description">
+              <h3 class="author-heading">The Author</h3>
+              <p>Felix Weickert</p>
+              <p>MSc / MIM</p>
+              <p>Product Owner @A1 Digital</p>
+              <p>Felix loves to repair things and to write stupid, provenly false articles ever since he was a child. Besides that, after learning coding for Android and iOS he wants to take on the next challenge by learning how to develop web applications.</p>
+            </div>
+          </div>
+          
+          <div class = "social">
+            <p>Share this article</p>
+            <div class = "social-links">
+            <a href="https://www.facebook.com" target="blank">
+              <img src="images/facebook.png" alt="facebook"/>
+            </a>
+            <a href="https://www.linkedin.com" target="blank">
+              <img src="images/linkedin.jpg" alt="facebook"/>
+            </a>
+            <a href="https://www.twitter.com" target="blank">
+              <img src="images/twitter.png" alt="facebook"/>
+            </a>
+          </div>
+
+          </div>
         </div>
         <div class = "footer">By Felix Weickert</div>
     </div>
