@@ -1,104 +1,148 @@
 @import "colors.css";
 @import "spacing.css";
 @import "font-size.css";
-
-.title{
+.title {
     font-size: 28px;
 }
-.standard{
+
+.standard {
     color: var(--text-color);
     padding: var(--spacing02);
     font-size: var(--font-size-large);
 }
-.container{
-    display:grid;
+
+.container {
+    display: grid;
     height: 100%;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 8% 87% 5%;
-    grid-template-areas: 
-    "hd hd hd hd hd hd hd hd"
-    "main main main main main main main main"
-    "ft ft ft ft ft ft ft ft";
- }
+    grid-template-areas: "hd hd hd hd hd hd hd hd" "main main main main main main main main" "ft ft ft ft ft ft ft ft";
+}
 
- .content{
+.content {
     grid-area: main;
     overflow: auto;
- }
+}
 
-body{
+body {
     height: 100vh;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
-h1{
-   font-family: 'Palatino';
-   color: var(--text-color);
+
+h1 {
+    font-family: 'Palatino';
+    color: var(--text-color);
+    font-weight: bold;
 }
-h2{
-   font-family: "Palatino";
-   font-size: var(--font-size-large);
+
+h2 {
+    font-family: "Palatino";
+    font-size: var(--font-size-large);
+    text-decoration: underline;
 }
-h3{
+
+h3 {
     font-family: "Palatino";
     font-size: var(--font-size-medium);
- }
-p{
-   font-family: "Optima";
-}
-.title-bar{
-   display: flex;
-   font-size: 5vh;
-   height: 100%;
-   width: 100%;
-   align-items: center;
-   margin: 0;
+    color: var(--sub-text-color);
 }
 
-.header{
-   grid-area: hd;
-   color: white;
-   background-color: var(--section-bg-color-blue);
-   padding: 12px 24px;
+figure {
+    color: var(--sub-text-color);
+    font-family: "Optima";
+    font-style: italic;
 }
 
-.footer{
-   grid-area: ft;
-   display: flex;
-   font-family: "Optima";
-   align-items: center;
-   padding-left: var(--spacing04);
-   color: white;
-   text-align: start;
-   background-color:var(--section-bg-color-dark);
-}
-a:link{
-   color: var(--link-color);
-}
-a:visited{
-   color: var(--link-color);
-}
-a:hover{
-   color: var(--link-hover-color);
+blockquote {
+    font-family: "Optima";
+    font-style: italic;
+    font-size: var(--font-size-basic);
+    color: var(--sub-text-color);
 }
 
-input[type="submit"]{
-    color:var(--button-color);
+p {
+    font-family: "Optima";
+    font-size: var(--font-size-basic);
+}
+
+.title-bar {
+    display: flex;
+    font-size: 5vh;
+    height: 100%;
+    align-items: center;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    grid-area: hd;
+    width: 100%;
+    color: white;
+    background-color: var(--section-bg-color-blue);
+    padding: 0 var(--spacing04);
+    ;
+}
+
+.header a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header img {
+    display: flex;
+    align-items: center;
+    height: 70%;
+    max-width: 8vh;
+    margin-right: var(--spacing04);
+    width: auto;
+}
+
+.footer {
+    grid-area: ft;
+    display: flex;
+    font-family: "Optima";
+    align-items: center;
+    padding-left: var(--spacing04);
+    color: white;
+    text-align: start;
+    background-color: var(--section-bg-color-dark);
+}
+
+a:link {
+    color: var(--link-color);
+}
+
+a:visited {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+input[type="submit"] {
+    color: var(--button-color);
     margin-top: 16px;
-    padding:10px;
+    padding: 10px;
     border-width: 3px;
-    border-style:solid;
+    border-style: solid;
     border-color: var(--button-color);
     font-family: "Optima";
     font-weight: bold;
 }
-input[type="submit"]:hover{
-  border-color: var(--button-color-hover);
-  color:var(--button-color-hover);
+
+input[type="submit"]:hover {
+    border-color: var(--button-color-hover);
+    color: var(--button-color-hover);
 }
-input[type="submit"]:focus{
-  border-color: var(--button-color-hover);
-  color:var(--button-color-hover);
-  outline:none;
+
+input[type="submit"]:focus {
+    border-color: var(--button-color-hover);
+    color: var(--button-color-hover);
+    outline: none;
 }

@@ -1,0 +1,120 @@
+@import "main.css";
+.article {
+  display: grid;
+  background-color: var(--section-bg-color-light-blue);
+  grid-template-columns: repeat(1fr);
+  grid-gap: var(--spacing05);
+  grid-template-areas: "hdg hdg hdg hdg hdg hdg hdg hdg" "img img img img img img img img" "ads ads ads ads ads ads ads ads" "art art art art art art art art" "aut aut aut aut aut aut aut aut" "soc soc soc soc soc soc soc soc";
+}
+
+.author {
+  grid-area: aut;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 var(--spacing04);
+}
+
+/* Medium Screens */
+
+@media (min-width: 600px) and (max-width:900px) {
+  .article {
+    grid-template-areas: "hdg hdg hdg hdg hdg hdg hdg hdg" "img img img img img img img img" "ads ads ads ads ads ads ads ads" "art art art art art art art art" "aut aut aut aut aut aut aut aut" "soc soc soc soc soc soc soc soc";
+  }
+}
+
+/* Large Screens */
+
+@media (min-width:901px) {
+  .article {
+    grid-template-areas: "hdg hdg hdg hdg hdg hdg hdg hdg" "img img img img img ads ads ads" "art art art art art aut aut aut" "soc soc soc soc soc soc soc soc";
+  }
+  .author {
+    flex-direction: row;
+    grid-area: aut;
+    display: flex;
+    align-items: center;
+    padding: 0 var(--spacing04);
+  }
+}
+
+.heading {
+  background-color: var(--section-bg-color);
+  grid-area: hdg;
+  padding: 0 var(--spacing04);
+}
+
+.author-image {
+  border-radius: 50%;
+  height: 150px;
+  filter: sepia(40%);
+  float: left;
+}
+
+.author-description {
+  margin: 0 0 0 var(--spacing04);
+}
+
+.author-heading {
+  margin: 0 0 var(--spacing03) 0;
+}
+
+.author-description p {
+  margin: var(--spacing02);
+}
+
+.social {
+  grid-area: soc;
+  padding: 0 0 var(--spacing04) var(--spacing04);
+  background-color: var(--section-bg-color-light);
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.social>p {
+  margin: var(--spacing04) 0 var(--spacing02) 0;
+}
+
+.social img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 40px;
+  height: 40px;
+  margin: var(--spacing02);
+}
+
+.article-text {
+  padding: 0 var(--spacing04);
+  grid-area: art;
+}
+
+.ads {
+  grid-area: ads;
+  display: flex;
+  background-color: lightgoldenrodyellow;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 var(--spacing04);
+  text-align: center;
+}
+
+.ad {
+  font-family: sans-serif;
+  font-size: 22px;
+  margin: var(--spacing04);
+  color: var(--primary-color);
+}
+
+.article-image {
+  grid-area: img;
+}
+
+.article-image>img {
+  width: 100%;
+  max-height: 60%;
+  object-fit: cover;
+}
