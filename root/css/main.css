@@ -65,6 +65,9 @@ blockquote {
 p {
     font-family: "Optima";
     font-size: var(--font-size-basic);
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
 }
 
 .title-bar {
@@ -75,7 +78,7 @@ p {
     margin: 0;
 }
 
-.header {
+header {
     display: flex;
     flex-direction: row;
     justify-items: flex-start;
@@ -87,22 +90,85 @@ p {
     ;
 }
 
-.header a {
-    height: 100%;
+nav{
+    background-color: var(--section-bg-color-blue);
+    grid-area: nav;
     display: flex;
-    align-items: center;
+    padding-left: var(--spacing04);
 }
 
-.header img {
-    display: flex;
-    align-items: center;
-    height: 70%;
-    max-width: 8vh;
-    margin-right: var(--spacing04);
-    width: auto;
+nav a {
+height: 100%;
+width: 100%;
+align-content: center;
+justify-content: center;
+align-items: center;
+display: flex;
+align-items: center;
 }
 
-.footer {
+#author{
+border-radius: 50%;
+}
+
+nav img {
+display: flex;
+align-items: center;
+height: 70%;
+max-width: 8vh;
+margin-right: var(--spacing04);
+width: auto;
+}
+
+.container {
+display: grid;
+height: 100%;
+grid-template-columns: 1fr;
+grid-template-rows: 8% 7% 80% 5%;
+grid-template-areas: 
+"hd"
+"nav"
+"main"
+"ft";
+}
+
+
+/* Large Screens */
+
+@media (min-width:901px) {
+.container {
+display: grid;
+height: 100%;
+grid-template-columns: 5% 95%;
+grid-template-rows: 8% 87% 5%;
+grid-template-areas: 
+"nav hd"
+"nav main"
+"nav ft";
+}
+
+nav{
+    grid-area: nav;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4px 0px;
+}
+
+nav a {
+    align-items: flex-start;
+    background-color: transparent;
+    padding: 0px 8px;
+}
+
+nav img {
+width: 100%;
+height: auto;
+}
+}
+
+footer {
     grid-area: ft;
     display: flex;
     font-family: "Optima";

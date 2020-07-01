@@ -38,6 +38,12 @@
   }
 }
 
+p{
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+}
+
 .heading {
   background-color: var(--section-bg-color);
   grid-area: hdg;
